@@ -1,0 +1,120 @@
+<html>
+
+<body>
+    <header>
+
+        <div>
+            <h1>AmritaHuss</h1>
+        </div>
+        <div>
+            <br>
+            <h2>Welcome</h2>
+        </div>
+
+    </header>
+
+    <section>
+        <input type="text" placeholder="Please enter your Username" id="nam">
+        <br>
+        <br>
+        <input placeholder="Please Enter your password" type="password" id="pass">
+        <br>
+        <br>
+        <button onclick="login()">LogIn</button>
+
+        <script>
+            const NamRef = document.getElementById("nam");
+            const PassRef = document.getElementById("pass");
+
+            function login() {
+
+                if (NamRef.value == "Amrita Kumari" && PassRef.value == "Amrita@123") {
+                    alert("Login successful");
+                    location.href = "https://www.webnovel.com/user/AmritaHuss";
+                }
+                else {
+                    alert("Invalid username or password")
+                }
+            }
+        </script>
+    </section>
+    <sec>
+        <p>My pinterest page :
+            <a href="https://www.pinterest.com">Click Here</a>
+            <br>
+
+            <br>
+
+            My wattpad page : <a href="https://www.wattpad.com/user/AmritaHuss">Click Here</a>
+            <br>
+
+            <br>
+
+
+            My scribble hub page : <a href="https://scribblehub.co.in"><button>Click Here</button></a>
+        </p>
+    </sec>
+
+    <footer>
+        <div>
+            <h3>Thank you for visiting our site!</h3>
+        </div>
+        <div>
+            <p>*copyright information*</p>
+        </div>
+
+
+
+    </footer>
+</body>
+
+
+</html>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    header {
+        background-color: rgb(244, 226, 136);
+        padding: 20px;
+        text-align: center;
+        font-size: larger;
+        font-weight: bolder;
+
+        h1 {
+            color: rgb(98, 27, 4);
+            font-size: xx-large;
+        }
+
+    }
+
+    section {
+        background-color: rgb(248, 234, 161);
+        padding: 20px;
+        text-align: center;
+        font-size: larger;
+        font-weight: bolder;
+
+    }
+
+    sec {
+        p {
+            background-color: rgb(244, 235, 191);
+            padding: 20px;
+        }
+    }
+
+
+    footer {
+        background-color: rgb(254, 249, 221);
+        padding: 20px;
+        font-size: smaller;
+        font-weight: bold;
+
+    }
+
+    footer h3 {
+        color: rgb(1, 69, 46);
+    }
+</style>
