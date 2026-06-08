@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <style>
+        #ca {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 16px;
+            align-items: center;
+
+        }
+
+
+        .card {
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 10px;
+            margin: 10px;
+            height: 150px;
+            width: 200px;
+            color: aliceblue;
+            background-color: grey;
+            text-align: center;
+        }
+
+        .male {
+            background-color: rgb(141, 141, 214);
+        }
+
+        .female {
+            background-color: pink;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="ca"></div>
+
+    <script>
+
+        data = [
+            { name: "john", age: "20", gender: "male" },
+            { name: "jane", age: "18", gender: "female" },
+            { name: "doe", age: "25", gender: "male" },
+            { name: "smith", age: "30", gender: "male" },
+            { name: "emily", age: "22", gender: "female" }
+
+        ]
+
+        let caRef = document.getElementById("ca");
+        for (i = 0; i < data.length; i++) {
+
+            genderClass = data[i].gender == 'male' ? 'male' : 'female'
+            caRef.innerHTML += `<div class='card ${genderClass}'>
+                <h2>${data[i].name}</h2>
+                <p>Age: ${data[i].age}</p>
+                <p>Gender: ${data[i].gender}</p>
+        
+                <button onclick="a()">delete</button> </div>`
+        }
+
+        function a() {
+            alert("not possible")
+        }
+    </script>
+
+
+
+
+</body>
