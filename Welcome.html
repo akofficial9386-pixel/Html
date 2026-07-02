@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            padding: 20px;
+            background-color: rgba(249, 124, 145, 0.532);
+            margin: 40px auto;
+            border: 10px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            box-shadow: 10px 10px 10px rgba(52, 2, 143, 0.15);
+            /*horizontal,vertical,blur region. And make the blur region 0 to give 3D vibes plus do the border radius 0 too. */
+
+        }
+
+        body {
+            background-color: rgb(246, 219, 219);
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            color: rgb(56, 5, 104);
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+            color: rgb(35, 1, 67);
+        }
+
+        label {
+            display: flex;
+            justify-content: center;
+        }
+
+        .fill {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            margin-top: 50px;
+            margin-left: 50%;
+            color: rgb(98, 20, 194);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <h1>Welcome !</h1>
+        <p>Please proceed to login</p>
+        <br>
+        <br>
+        <div class="fill">
+            <label>Name </label>
+            <input placeholder="Enter your name" type="text" id="name">
+        </div>
+        <br>
+        <br>
+        <div class="fill">
+
+            <label>Password </label>
+            <input placeholder="Password" type="password" id="pass">
+        </div>
+        <br>
+        <br>
+        <div class="fill">
+            <label>Age </label>
+            <input placeholder="age" type="number" id="age">
+            <br>
+            <br>
+        </div>
+        <button onclick="validate()" class="btn">LogIn</button>
+    </div>
+
+    <script>
+        nameRef = document.getElementById("name");
+        ageRef = document.getElementById("age");
+        passRef = document.getElementById("pass");
+
+
+        function validate() {
+
+            if (nameRef.value.trim().length == 0 || passRef.value.trim().length == 0 || ageRef.value.trim().length == 0) {
+                alert('Please fill all the datas');
+            }
+            else if (passRef.value.length < 6) {
+                alert('Password should be more than six characters');
+            }
+            else if (ageRef.value < 18) {
+                alert('Minor !');
+            }
+            else {
+                alert('Major !');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
